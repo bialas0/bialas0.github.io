@@ -2,4 +2,5 @@
 A website using HTML, CSS and JS. 
 
 
-!!! #IMPORTANT !!!
+# !!! IMPORTANT !!!
+## THIS IS FOR EDUCATIONAL PURPOSES ONLY
