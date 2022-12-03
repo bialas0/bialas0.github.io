@@ -63,12 +63,10 @@ html {
     margin:0 auto;
     border: 0;
     padding: 0%;
-    overflow: hidden;
     text-align: center;
     background-color: #457B9D;
     display: flex;
     align-items: center;
-    justify-content: left;
     width: 100%;
     align-items: center;
   }
@@ -87,8 +85,111 @@ html {
   }
 
   .navbar :hover {
+    transition: 0.75s;
     color: #1D3557;
     cursor: pointer;
+  }
+
+  .dropbtn {
+    background-color: #457B9D;
+    justify-self: left;
+    float: left;
+    float: left;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn img {
+    filter: invert(1);
+    width: 2.25vw;
+    height: auto;
+  }
+  
+  .dropdown {
+    position: relative;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .dropdown-content {
+    transition: 1s;
+    display: none;
+    position: absolute;
+    left: -246px;
+    background-color: #457B9D;
+    width: auto;
+    box-shadow: 8px 8px 12px 8px #1D3557;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    display: flex;
+    float: left;
+    color: #F1FAEE;
+    padding: 12px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #457B9D;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    transition: 1.5s;
+    display: flex;
+    float: left;
+  }
+  
+  .dropdown:hover .dropbtn {
+    transition: 0.75s;
+    color: #1D3557;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .dropbtn img {
+      width: 3.25vh;
+      height: auto;
+    }
+
+    .dropdown {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .dropbtn {
+      background-color: #457B9D;
+      margin: 0;
+      display: flex;
+      float: right;
+      width: fit-content;
+      height: fit-content;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      left: -67px;
+      background-color: #457B9D;
+      width: 100px;
+      box-shadow: 0px 8px 16px 0px #1D3557;
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: #F1FAEE;
+      padding: 6px 8px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+      max-width: max-content;
+    }
   }
 
   .parallax {
@@ -299,9 +400,8 @@ html {
     opacity: 1;
     height: 45vh;
     width: 50%;
-    overflow: hidden;
-    padding-top: 2%;
     text-align: center;
+    overflow: hidden;
   }
 
   .image-mot h {
@@ -313,21 +413,16 @@ html {
 
   .image-mot p {
     margin-left: 1.5vw;
-    margin-left: 1.5vw;
+    margin-right: 1.5vw;
     color: #F1FAEE;
   }
 
-  @media only screen and (max-width: 768px) {
-    .mot {
-      height: 10vh;
-    }
-  }
-
   .image-mot {
-    background-image: url("images/viper-engine.jpg");
+    background-image: url("images/mechanics.jpg");
     transition: 1s;
     height: 100%;
     width: 100%;
+    object-fit: contain;
     filter: brightness(35%);
   }
 
@@ -342,6 +437,12 @@ html {
     text-decoration: none;
     height: 100%;
     width: 100%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .mot {
+      height: 10vh;
+    }
   }
   
   @media only screen and (max-width: 768px)

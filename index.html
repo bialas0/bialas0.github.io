@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="browser-icon" rel="icon" href="logos/logo-marine.png">
     <link rel="stylesheet" href="style.css">
     <title>Motor Point UK || Home</title>
 </head>
 <body>
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('browser-icon').href = "logos/logo-white.png"
+        }
+    </script>
     <div class="header">
         <h>Providing Quality Cars & Service at Affordable Prices</h>
         
@@ -16,7 +22,14 @@
             <a id="nav-btn" href="index.html">Home</a>
             <a id="nav-btn" href="car_sales.html">Car Sales</a>
             <a id="nav-btn" href="#mot/repairs">MOT/ Repairs</a>
-            <a id="nav-btn" href="#about">About Us</a>
+            <div class="dropdown">
+                <button id="drop-down" class="dropbtn"><img src="logos/hamburger.png" alt="hamburger"></button>
+                <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="about.html">Location</a>
+                    <a href="about.html">Contact</a>
+                </div>
+            </div>
         </div>
     </div>
 
