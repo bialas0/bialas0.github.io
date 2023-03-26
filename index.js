@@ -14,10 +14,15 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   closeBtn.addEventListener('click', () => {
     if (isVisible) {
-      console.log('cloicked!')
       navbarEl.style.height = '0';
       navbarEl.style.visibility = 'hidden';
       isVisible = false;
     }
   });
 });
+
+window.addEventListener('scroll', () => {
+  if (document.body.scrollTop <= 100 || window.body.scrollTop <= 100) {
+    
+  }
+})
